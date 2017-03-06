@@ -1,0 +1,81 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Login.master.vb" Inherits="QLHS.Login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>TungTT Site</title>
+    <link href="~/Style/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Style/Site.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .wrapper {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .form-signin {
+            max-width: 500px;
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+
+        .form-signin-heading,
+        .checkbox {
+            margin-bottom: 30px;
+        }
+
+        .checkbox {
+            font-weight: normal;
+        }
+
+        .form-control {
+            position: relative;
+            font-size: 16px;
+            height: auto;
+            padding: 10px;
+        @include box-sizing(border-box);
+
+        &:focus {
+             z-index: 2;
+         }
+        }
+
+        input[type="text"] {
+            margin-bottom: -1px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        input[type="password"] {
+            margin-bottom: 20px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1 class="DDMainHeader">TungTT Site</h1>
+    <div class="DDNavigation">
+        
+    </div>
+
+    <div id="content" class="container">
+        <div class="row">
+            <div class="users form wrapper panel-body">
+                <form id="form1" runat="server" class="form-signin">
+                    <%-- TODO: Enable partial rendering by setting the EnablePartialRendering attribute to "true" to provide a smoother browsing experience.
+                    Leaving partial rendering disabled will provide a better debugging experience while the application is in development. --%>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false"/>
+        
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

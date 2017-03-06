@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLSVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="QLSVModelStoreContainer">
+    <EntitySet Name="classes" EntityType="QLSVModel.Store.classes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="faculties" EntityType="QLSVModel.Store.faculties" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="roles" EntityType="QLSVModel.Store.roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="scores" EntityType="QLSVModel.Store.scores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="QLSVModel.Store.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="QLSVModel.Store.users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_classes_faculties" Association="QLSVModel.Store.FK_classes_faculties">
+      <End Role="faculties" EntitySet="faculties" />
+      <End Role="classes" EntitySet="classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_scores_classes" Association="QLSVModel.Store.FK_scores_classes">
+      <End Role="classes" EntitySet="classes" />
+      <End Role="scores" EntitySet="scores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_scores_users" Association="QLSVModel.Store.FK_scores_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="scores" EntitySet="scores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_faculties" Association="QLSVModel.Store.FK_users_faculties">
+      <End Role="faculties" EntitySet="faculties" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_roles" Association="QLSVModel.Store.FK_users_roles">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="classes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="class_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="faculty_id" Type="int" Nullable="false" />
+    <Property Name="delflg" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="faculties">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="faculty_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="delflg" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="role_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="delflg" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="scores">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="student_id" Type="int" Nullable="false" />
+    <Property Name="class_id" Type="int" Nullable="false" />
+    <Property Name="score" Type="float" Nullable="false" />
+    <Property Name="delflg" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Nullable="false" MaxLength="128" Type="nvarchar" />
+    <Property Name="principal_id" Nullable="false" Type="int" />
+    <Property Name="diagram_id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="faculty_id" Type="int" Nullable="false" />
+    <Property Name="delflg" Type="int" Nullable="false" />
+    <Property Name="role_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_classes_faculties">
+    <End Role="faculties" Type="QLSVModel.Store.faculties" Multiplicity="1" />
+    <End Role="classes" Type="QLSVModel.Store.classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="faculties">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="classes">
+        <PropertyRef Name="faculty_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_scores_classes">
+    <End Role="classes" Type="QLSVModel.Store.classes" Multiplicity="1" />
+    <End Role="scores" Type="QLSVModel.Store.scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="classes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scores">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_scores_users">
+    <End Role="users" Type="QLSVModel.Store.users" Multiplicity="1" />
+    <End Role="scores" Type="QLSVModel.Store.scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scores">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_faculties">
+    <End Role="faculties" Type="QLSVModel.Store.faculties" Multiplicity="1" />
+    <End Role="users" Type="QLSVModel.Store.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="faculties">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="faculty_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_roles">
+    <End Role="roles" Type="QLSVModel.Store.roles" Multiplicity="1" />
+    <End Role="users" Type="QLSVModel.Store.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

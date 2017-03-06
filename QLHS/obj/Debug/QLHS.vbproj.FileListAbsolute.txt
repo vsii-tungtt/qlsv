@@ -1,0 +1,8 @@
+c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\bin\QLHS.dll
+c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\bin\QLHS.pdb
+c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\bin\QLHS.xml
+c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.Resources.resources
+c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.vbproj.GenerateResource.Cache
+c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.dll
+c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.xml
+c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.pdb

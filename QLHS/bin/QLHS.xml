@@ -1,0 +1,712 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+QLHS
+</name>
+</assembly>
+<members>
+<member name="F:QLHS.MyDetail.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.HyperLink2">
+	<summary>
+HyperLink2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.lblUsername">
+	<summary>
+lblUsername control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.lblFaculty">
+	<summary>
+lblFaculty control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.head">
+	<summary>
+head control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.A1">
+	<summary>
+A1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.Img1">
+	<summary>
+Img1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.HyperLink2">
+	<summary>
+HyperLink2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.HyperLink3">
+	<summary>
+HyperLink3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.HyperLink4">
+	<summary>
+HyperLink4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.HyperLink5">
+	<summary>
+HyperLink5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Site.ContentPlaceHolder1">
+	<summary>
+ContentPlaceHolder1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.HyperLink2">
+	<summary>
+HyperLink2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.HyperLink3">
+	<summary>
+HyperLink3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.lblclassCode">
+	<summary>
+lblclassCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.lblclassName">
+	<summary>
+lblclassName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.lblFaculty">
+	<summary>
+lblFaculty control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassDetail.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Login1.txtUsername">
+	<summary>
+txtUsername control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Login1.txtPassword">
+	<summary>
+txtPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Login1.btnLogin">
+	<summary>
+btnLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Login1.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="M:QLHS.QLSVEntities.#ctor">
+	<summary>
+ Initializes a new QLSVEntities object using the connection string found in the 'QLSVEntities' section of the application configuration file.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities.#ctor(System.String)">
+	<summary>
+ Initialize a new QLSVEntities object.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+	<summary>
+ Initialize a new QLSVEntities object.
+ </summary>
+</member><member name="P:QLHS.QLSVEntities.classes">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.QLSVEntities.faculties">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.QLSVEntities.roles">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.QLSVEntities.scores">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.QLSVEntities.sysdiagrams">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.QLSVEntities.users">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities.AddToclasses(QLHS.class)">
+	<summary>
+ Deprecated Method for adding a new object to the classes EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities.AddTofaculties(QLHS.faculty)">
+	<summary>
+ Deprecated Method for adding a new object to the faculties EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities.AddToroles(QLHS.role)">
+	<summary>
+ Deprecated Method for adding a new object to the roles EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities.AddToscores(QLHS.score)">
+	<summary>
+ Deprecated Method for adding a new object to the scores EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities.AddTosysdiagrams(QLHS.sysdiagram)">
+	<summary>
+ Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities.AddTousers(QLHS.user)">
+	<summary>
+ Deprecated Method for adding a new object to the users EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="T:QLHS.QLSVEntities">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:QLHS.class.Createclass(System.Int32,System.String,System.Int32,System.Int32)">
+	<summary>
+ Create a new class object.
+ </summary>
+	<param name="id">Initial value of the id property.</param>
+	<param name="class_name">Initial value of the class_name property.</param>
+	<param name="faculty_id">Initial value of the faculty_id property.</param>
+	<param name="delflg">Initial value of the delflg property.</param>
+</member><member name="P:QLHS.class.id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.class.class_name">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.class.faculty_id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.class.delflg">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.class.faculty">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.class.facultyReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.class.scores">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:QLHS.class">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:QLHS.faculty.Createfaculty(System.Int32,System.String,System.Int32)">
+	<summary>
+ Create a new faculty object.
+ </summary>
+	<param name="id">Initial value of the id property.</param>
+	<param name="faculty_name">Initial value of the faculty_name property.</param>
+	<param name="delflg">Initial value of the delflg property.</param>
+</member><member name="P:QLHS.faculty.id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.faculty.faculty_name">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.faculty.delflg">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.faculty.classes">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.faculty.users">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:QLHS.faculty">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:QLHS.role.Createrole(System.Int32,System.String,System.Int32)">
+	<summary>
+ Create a new role object.
+ </summary>
+	<param name="id">Initial value of the id property.</param>
+	<param name="role_name">Initial value of the role_name property.</param>
+	<param name="delflg">Initial value of the delflg property.</param>
+</member><member name="P:QLHS.role.id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.role.role_name">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.role.delflg">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.role.users">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:QLHS.role">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:QLHS.score.Createscore(System.Int32,System.Int32,System.Int32,System.Double,System.Int32)">
+	<summary>
+ Create a new score object.
+ </summary>
+	<param name="id">Initial value of the id property.</param>
+	<param name="student_id">Initial value of the student_id property.</param>
+	<param name="class_id">Initial value of the class_id property.</param>
+	<param name="score1">Initial value of the score1 property.</param>
+	<param name="delflg">Initial value of the delflg property.</param>
+</member><member name="P:QLHS.score.id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.score.student_id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.score.class_id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.score.score1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.score.delflg">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.score.class">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.score.classReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.score.user">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.score.userReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:QLHS.score">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:QLHS.sysdiagram.Createsysdiagram(System.String,System.Int32,System.Int32)">
+	<summary>
+ Create a new sysdiagram object.
+ </summary>
+	<param name="name">Initial value of the name property.</param>
+	<param name="principal_id">Initial value of the principal_id property.</param>
+	<param name="diagram_id">Initial value of the diagram_id property.</param>
+</member><member name="P:QLHS.sysdiagram.name">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.sysdiagram.principal_id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.sysdiagram.diagram_id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.sysdiagram.version">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.sysdiagram.definition">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:QLHS.sysdiagram">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:QLHS.user.Createuser(System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Create a new user object.
+ </summary>
+	<param name="id">Initial value of the id property.</param>
+	<param name="username">Initial value of the username property.</param>
+	<param name="password">Initial value of the password property.</param>
+	<param name="faculty_id">Initial value of the faculty_id property.</param>
+	<param name="delflg">Initial value of the delflg property.</param>
+	<param name="role_id">Initial value of the role_id property.</param>
+</member><member name="P:QLHS.user.id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.username">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.password">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.faculty_id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.delflg">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.role_id">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.faculty">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.facultyReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.role">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.roleReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.scores">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:QLHS.user">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="F:QLHS.Login.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Login.head">
+	<summary>
+head control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Login.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Login.ScriptManager1">
+	<summary>
+ScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Login.ContentPlaceHolder1">
+	<summary>
+ContentPlaceHolder1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Scores.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Scores.HyperLink2">
+	<summary>
+HyperLink2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Scores.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Scores.lblAvarage">
+	<summary>
+lblAvarage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS._Default.ScriptManagerProxy1">
+	<summary>
+ScriptManagerProxy1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS._Default.Menu1">
+	<summary>
+Menu1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassesList.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassesList.HyperLink2">
+	<summary>
+HyperLink2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.ClassesList.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.Logout.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:QLHS.My.MyWebExtension.Application">
+	<summary>
+ Returns information about the current application.
+ </summary>
+</member><member name="P:QLHS.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:QLHS.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:QLHS.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:QLHS.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:QLHS.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="P:QLHS.My.MyWebExtension.WebServices">
+	<summary>
+ Provides access to WebServices added to this project.
+ </summary>
+</member><member name="T:QLHS.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
