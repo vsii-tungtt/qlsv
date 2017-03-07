@@ -6,3 +6,11 @@ c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.v
 c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.dll
 c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.xml
 c:\users\tungtt\documents\visual studio 2010\Projects\QLHS\QLHS\obj\Debug\QLHS.pdb
+D:\QLSV\QLHS\bin\QLHS.dll
+D:\QLSV\QLHS\bin\QLHS.pdb
+D:\QLSV\QLHS\bin\QLHS.xml
+D:\QLSV\QLHS\obj\Debug\QLHS.Resources.resources
+D:\QLSV\QLHS\obj\Debug\QLHS.vbproj.GenerateResource.Cache
+D:\QLSV\QLHS\obj\Debug\QLHS.dll
+D:\QLSV\QLHS\obj\Debug\QLHS.xml
+D:\QLSV\QLHS\obj\Debug\QLHS.pdb
