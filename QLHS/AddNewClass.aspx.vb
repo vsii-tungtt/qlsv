@@ -9,13 +9,12 @@ Public Class AddNewClass
     Const ROLE_TEACHER As String = "1"
     Const ROLE_STUDENT As String = "2"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-    End Sub
-
-    Protected Sub btnCreateClass_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnCreateClass.Click
         If (Session("Role") = ROLE_STUDENT) Then
             Throw New System.Exception("You are not authorized to do this.")
         End If
+    End Sub
+
+    Protected Sub btnCreateClass_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnCreateClass.Click
         Dim classCode As String = txtClassCode.Text
         Dim className As String = txtClassName.Text
         Dim faculty As String = Session("FacultyOfUser")

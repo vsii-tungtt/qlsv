@@ -6,7 +6,7 @@ QLHS
 </name>
 </assembly>
 <members>
-<member name="F:QLHS.AddNewClass.HyperLink1">
+<member name="F:QLHS.EditClass.HyperLink1">
 	<summary>
 HyperLink1 control.
 </summary>
@@ -14,7 +14,7 @@ HyperLink1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:QLHS.AddNewClass.HyperLink2">
+</member><member name="F:QLHS.EditClass.HyperLink2">
 	<summary>
 HyperLink2 control.
 </summary>
@@ -22,7 +22,7 @@ HyperLink2 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:QLHS.AddNewClass.HyperLink3">
+</member><member name="F:QLHS.EditClass.HyperLink3">
 	<summary>
 HyperLink3 control.
 </summary>
@@ -30,7 +30,7 @@ HyperLink3 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:QLHS.AddNewClass.txtClassCode">
+</member><member name="F:QLHS.EditClass.txtClassCode">
 	<summary>
 txtClassCode control.
 </summary>
@@ -38,7 +38,7 @@ txtClassCode control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:QLHS.AddNewClass.txtClassName">
+</member><member name="F:QLHS.EditClass.txtClassName">
 	<summary>
 txtClassName control.
 </summary>
@@ -46,15 +46,15 @@ txtClassName control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:QLHS.AddNewClass.btnCreateClass">
+</member><member name="F:QLHS.EditClass.btnEditClass">
 	<summary>
-btnCreateClass control.
+btnEditClass control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:QLHS.AddNewClass.HyperLink4">
+</member><member name="F:QLHS.EditClass.HyperLink4">
 	<summary>
 HyperLink4 control.
 </summary>
@@ -630,6 +630,62 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:QLHS._Default.Menu1">
 	<summary>
 Menu1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.AddNewClass.HyperLink1">
+	<summary>
+HyperLink1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.AddNewClass.HyperLink2">
+	<summary>
+HyperLink2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.AddNewClass.HyperLink3">
+	<summary>
+HyperLink3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.AddNewClass.txtClassCode">
+	<summary>
+txtClassCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.AddNewClass.txtClassName">
+	<summary>
+txtClassName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.AddNewClass.btnCreateClass">
+	<summary>
+btnCreateClass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.AddNewClass.HyperLink4">
+	<summary>
+HyperLink4 control.
 </summary>
 	<remarks>
 Auto-generated field.

@@ -136,7 +136,15 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Content Include="EditClass.aspx" />
     <Content Include="Global.asax" />
+    <Compile Include="EditClass.aspx.designer.vb">
+      <DependentUpon>EditClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditClass.aspx.vb">
+      <DependentUpon>EditClass.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -15,7 +15,9 @@ Public Class Login1
         cmd = New SqlCommand("SELECT password, id, role_id, faculty_id FROM users WHERE delflg=0 AND username='" + txtUsername.Text + "'", con)
         dr = cmd.ExecuteReader
         If (dr.Read) Then
-            If (dr(0).ToString = txtPassword.Text) Then
+            Dim password As String = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text, "SHA1")
+            Response.Write(password.ToString)
+            If (dr(0).ToString = password.ToString) Then
                 Session("UserID") = dr(1).ToString
                 Session("Role") = dr(2).ToString
                 Session("FacultyOfUser") = dr(3).ToString

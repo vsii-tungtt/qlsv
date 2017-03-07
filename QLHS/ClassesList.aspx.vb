@@ -32,6 +32,7 @@ Public Class ClassesList
         GridView1.DataBind()
         If (Session("Role") = ROLE_STUDENT) Then
             GridView1.Columns(3).Visible = False
+            GridView1.Columns(5).Visible = False
         End If
     End Sub
 
