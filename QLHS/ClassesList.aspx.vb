@@ -16,12 +16,12 @@ Public Class ClassesList
 
 
     Private Sub BindGrid()
-        con = New SqlConnection("Data Source=TUNGTT-W7;Initial Catalog=QLSV;Integrated Security=SSPI")
+        con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
         If (Session("Role") = ROLE_STUDENT) Then
             cmd = New SqlCommand("SELECT classes.class_code AS classCode, classes.id AS id, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id INNER JOIN scores ON classes.id = scores.class_id WHERE classes.delflg = 0 AND scores.student_id=" + Session("UserID"))
         ElseIf (Session("Role") = ROLE_TEACHER) Then
-            cmd = New SqlCommand("SELECT classes.class_code AS classCode, classes.id AS id, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id WHERE classes.delflg = 0")
+            cmd = New SqlCommand("SELECT classes.class_code AS classCode, classes.id AS id, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id WHERE classes.delflg = 0 AND classes.faculty_id=" + Session("FacultyOfUser"))
         End If
         sda = New SqlDataAdapter()
         cmd.Connection = con
@@ -40,7 +40,7 @@ Public Class ClassesList
             MsgBox("You are not authorized to do this.")
         ElseIf (Session("Role") = ROLE_TEACHER) Then
             Dim classId As Integer = Convert.ToInt32(GridView1.DataKeys(e.RowIndex).Values(0))
-            con = New SqlConnection("Data Source=TUNGTT-W7;Initial Catalog=QLSV;Integrated Security=SSPI")
+            con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
             cmd = New SqlCommand("UPDATE classes SET delflg = 1 WHERE id = " + classId.ToString)
             cmd.Connection = con
             con.Open()

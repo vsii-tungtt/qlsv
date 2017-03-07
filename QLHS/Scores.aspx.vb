@@ -19,7 +19,7 @@ Public Class Scores
     End Sub
 
     Private Sub BindGrid()
-        con = New SqlConnection("Data Source=TUNGTT-W7;Initial Catalog=QLSV;Integrated Security=SSPI")
+        con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
         cmd = New SqlCommand("SELECT scores.id AS id, scores.score AS score, classes.class_code AS classCode, classes.class_name AS className FROM scores INNER JOIN classes ON scores.class_id = classes.id WHERE scores.delflg=0 AND classes.delflg=0 AND scores.student_id=" + Session("UserID"))
         sda = New SqlDataAdapter()

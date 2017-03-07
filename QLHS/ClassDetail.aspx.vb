@@ -18,7 +18,7 @@ Public Class ClassDetail
 
     Private Sub BindGrid()
         Dim classId As String = Request.QueryString("classId").ToString
-        con = New SqlConnection("Data Source=TUNGTT-W7;Initial Catalog=QLSV;Integrated Security=SSPI")
+        con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
         cmd = New SqlCommand("SELECT scores.id AS id, users.username AS username, scores.score AS score FROM scores INNER JOIN users ON scores.student_id = users.id WHERE scores.delflg=0 AND users.delflg=0 AND scores.class_id=" + classId)
         sda = New SqlDataAdapter()
@@ -35,7 +35,7 @@ Public Class ClassDetail
 
     Private Sub BindLabel()
         Dim classId As String = Request.QueryString("classId").ToString
-        con = New SqlConnection("Data Source=TUNGTT-W7;Initial Catalog=QLSV;Integrated Security=SSPI")
+        con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
         cmd = New SqlCommand("Select classes.class_code AS classCode, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id WHERE classes.id=" + classId)
         cmd.Connection = con
@@ -56,7 +56,7 @@ Public Class ClassDetail
             MsgBox("You are not authorized to do this.")
         ElseIf (Session("Role") = ROLE_TEACHER) Then
             Dim scoreId As Integer = Convert.ToInt32(GridView1.DataKeys(e.RowIndex).Values(0))
-            con = New SqlConnection("Data Source=TUNGTT-W7;Initial Catalog=QLSV;Integrated Security=SSPI")
+            con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
             cmd = New SqlCommand("UPDATE scores SET delflg = 1 WHERE id = " + scoreId.ToString)
             cmd.Connection = con
             con.Open()

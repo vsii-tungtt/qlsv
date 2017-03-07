@@ -96,10 +96,18 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddNewClass.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="ClassDetail.aspx" />
     <Content Include="ClassesList.aspx" />
     <Content Include="Default.aspx" />
+    <Compile Include="AddNewClass.aspx.designer.vb">
+      <DependentUpon>AddNewClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewClass.aspx.vb">
+      <DependentUpon>AddNewClass.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ChangePassword.aspx.designer.vb">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>

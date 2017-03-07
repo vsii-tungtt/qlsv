@@ -13,7 +13,7 @@ Public Class MyDetail
     End Sub
 
     Private Sub BindLabel()
-        con = New SqlConnection("Data Source=TUNGTT-W7;Initial Catalog=QLSV;Integrated Security=SSPI")
+        con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
         cmd = New SqlCommand("SELECT users.username as username, faculties.faculty_name as facultyName FROM users INNER JOIN faculties ON users.faculty_id = faculties.id WHERE users.id=" + Session("UserID"))
         cmd.Connection = con

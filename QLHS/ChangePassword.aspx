@@ -28,7 +28,9 @@
                                 TextMode="Password"></asp:TextBox>
                         </div>
                     </fieldset>
-                    <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" CssClass="btn aka-btn aka-btn-darkblue col-sm-12 btn-success" />
+                    <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" CssClass="btn aka-btn aka-btn-darkblue col-sm-4 btn-success" />
+                    <div class="col-sm-4"></div>
+                    <asp:HyperLink ID="HyperLink3" CssClass="btn aka-btn col-sm-4 btn-default" runat="server" NavigateUrl="~/Default.aspx">Cancel</asp:HyperLink>
                 </div>
             </div>
         </div>

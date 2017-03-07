@@ -14,7 +14,7 @@ Public Class ChangePassword
         Dim currentPassword As String = txtCurrentPassword.Text
         Dim newPassword As String = txtNewPassword.Text
         Dim userId As String = Session("UserID")
-        con = New SqlConnection("Data Source=TUNGTT-W7;Initial Catalog=QLSV;Integrated Security=SSPI")
+        con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
         cmd = New SqlCommand("SELECT password FROM users WHERE id=" + userId, con)
         dr = cmd.ExecuteReader

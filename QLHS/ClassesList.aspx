@@ -29,6 +29,11 @@
                                         </Columns>
                                     </asp:GridView>
                                 </div>
+                                <% If (Session("Role") = 1) Then%>
+                                <div class="row no-margin">
+                                    <asp:HyperLink runat="server" Text="Add New Class" NavigateUrl="~/AddNewClass.aspx" CssClass="btn btn-info"></asp:HyperLink>
+                                </div>
+                                <% End If%>
                             </div>
                         </div>
                     </div>
