@@ -17,6 +17,7 @@
     <div class="col-md-7 box-center">
         <div class="box">
             <div class="box-body">
+                <form runat="server">
                 <div class="wrapper panel-body">
                     <fieldset>
                         <legend>Edit Class</legend>
@@ -33,6 +34,7 @@
                     <div class="col-sm-4"></div>
                     <asp:HyperLink ID="HyperLink4" CssClass="btn aka-btn col-sm-4 btn-default" runat="server" NavigateUrl="~/ClassesList.aspx">Cancel</asp:HyperLink>
                 </div>
+                </form>
             </div>
         </div>
     </div>

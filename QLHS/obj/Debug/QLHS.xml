@@ -30,67 +30,67 @@ GridView1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="M:QLHS.QLSVEntities.#ctor">
+</member><member name="M:QLHS.QLSVEntities2.#ctor">
 	<summary>
- Initializes a new QLSVEntities object using the connection string found in the 'QLSVEntities' section of the application configuration file.
+ Initializes a new QLSVEntities2 object using the connection string found in the 'QLSVEntities2' section of the application configuration file.
  </summary>
-</member><member name="M:QLHS.QLSVEntities.#ctor(System.String)">
+</member><member name="M:QLHS.QLSVEntities2.#ctor(System.String)">
 	<summary>
- Initialize a new QLSVEntities object.
+ Initialize a new QLSVEntities2 object.
  </summary>
-</member><member name="M:QLHS.QLSVEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+</member><member name="M:QLHS.QLSVEntities2.#ctor(System.Data.EntityClient.EntityConnection)">
 	<summary>
- Initialize a new QLSVEntities object.
+ Initialize a new QLSVEntities2 object.
  </summary>
-</member><member name="P:QLHS.QLSVEntities.classes">
-	<summary>
- No Metadata Documentation available.
- </summary>
-</member><member name="P:QLHS.QLSVEntities.faculties">
+</member><member name="P:QLHS.QLSVEntities2.classes">
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="P:QLHS.QLSVEntities.roles">
+</member><member name="P:QLHS.QLSVEntities2.faculties">
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="P:QLHS.QLSVEntities.scores">
+</member><member name="P:QLHS.QLSVEntities2.roles">
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="P:QLHS.QLSVEntities.sysdiagrams">
+</member><member name="P:QLHS.QLSVEntities2.scores">
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="P:QLHS.QLSVEntities.users">
+</member><member name="P:QLHS.QLSVEntities2.sexes">
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="M:QLHS.QLSVEntities.AddToclasses(QLHS.class)">
+</member><member name="P:QLHS.QLSVEntities2.users">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:QLHS.QLSVEntities2.AddToclasses(QLHS.class)">
 	<summary>
  Deprecated Method for adding a new object to the classes EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
  </summary>
-</member><member name="M:QLHS.QLSVEntities.AddTofaculties(QLHS.faculty)">
+</member><member name="M:QLHS.QLSVEntities2.AddTofaculties(QLHS.faculty)">
 	<summary>
  Deprecated Method for adding a new object to the faculties EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
  </summary>
-</member><member name="M:QLHS.QLSVEntities.AddToroles(QLHS.role)">
+</member><member name="M:QLHS.QLSVEntities2.AddToroles(QLHS.role)">
 	<summary>
  Deprecated Method for adding a new object to the roles EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
  </summary>
-</member><member name="M:QLHS.QLSVEntities.AddToscores(QLHS.score)">
+</member><member name="M:QLHS.QLSVEntities2.AddToscores(QLHS.score)">
 	<summary>
  Deprecated Method for adding a new object to the scores EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
  </summary>
-</member><member name="M:QLHS.QLSVEntities.AddTosysdiagrams(QLHS.sysdiagram)">
+</member><member name="M:QLHS.QLSVEntities2.AddTosexes(QLHS.sex)">
 	<summary>
- Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ Deprecated Method for adding a new object to the sexes EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
  </summary>
-</member><member name="M:QLHS.QLSVEntities.AddTousers(QLHS.user)">
+</member><member name="M:QLHS.QLSVEntities2.AddTousers(QLHS.user)">
 	<summary>
  Deprecated Method for adding a new object to the users EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
  </summary>
-</member><member name="T:QLHS.QLSVEntities">
+</member><member name="T:QLHS.QLSVEntities2">
 	<summary>
  No Metadata Documentation available.
  </summary>
@@ -115,6 +115,10 @@ To modify move field declaration from designer file to code-behind file.
  No Metadata Documentation available.
  </summary>
 </member><member name="P:QLHS.class.delflg">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.class.class_code">
 	<summary>
  No Metadata Documentation available.
  </summary>
@@ -192,14 +196,13 @@ To modify move field declaration from designer file to code-behind file.
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="M:QLHS.score.Createscore(System.Int32,System.Int32,System.Int32,System.Double,System.Int32)">
+</member><member name="M:QLHS.score.Createscore(System.Int32,System.Int32,System.Int32,System.Int32)">
 	<summary>
  Create a new score object.
  </summary>
 	<param name="id">Initial value of the id property.</param>
 	<param name="student_id">Initial value of the student_id property.</param>
 	<param name="class_id">Initial value of the class_id property.</param>
-	<param name="score1">Initial value of the score1 property.</param>
 	<param name="delflg">Initial value of the delflg property.</param>
 </member><member name="P:QLHS.score.id">
 	<summary>
@@ -241,34 +244,25 @@ To modify move field declaration from designer file to code-behind file.
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="M:QLHS.sysdiagram.Createsysdiagram(System.String,System.Int32,System.Int32)">
+</member><member name="M:QLHS.sex.Createsex(System.Int32,System.String)">
 	<summary>
- Create a new sysdiagram object.
+ Create a new sex object.
  </summary>
-	<param name="name">Initial value of the name property.</param>
-	<param name="principal_id">Initial value of the principal_id property.</param>
-	<param name="diagram_id">Initial value of the diagram_id property.</param>
-</member><member name="P:QLHS.sysdiagram.name">
-	<summary>
- No Metadata Documentation available.
- </summary>
-</member><member name="P:QLHS.sysdiagram.principal_id">
+	<param name="id">Initial value of the id property.</param>
+	<param name="sex1">Initial value of the sex1 property.</param>
+</member><member name="P:QLHS.sex.id">
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="P:QLHS.sysdiagram.diagram_id">
+</member><member name="P:QLHS.sex.sex1">
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="P:QLHS.sysdiagram.version">
+</member><member name="P:QLHS.sex.users">
 	<summary>
  No Metadata Documentation available.
  </summary>
-</member><member name="P:QLHS.sysdiagram.definition">
-	<summary>
- No Metadata Documentation available.
- </summary>
-</member><member name="T:QLHS.sysdiagram">
+</member><member name="T:QLHS.sex">
 	<summary>
  No Metadata Documentation available.
  </summary>
@@ -306,6 +300,26 @@ To modify move field declaration from designer file to code-behind file.
 	<summary>
  No Metadata Documentation available.
  </summary>
+</member><member name="P:QLHS.user.full_name">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.birthday">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.sex">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.residence">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.country">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
 </member><member name="P:QLHS.user.faculty">
 	<summary>
  No Metadata Documentation available.
@@ -323,6 +337,14 @@ To modify move field declaration from designer file to code-behind file.
  No Metadata Documentation available.
  </summary>
 </member><member name="P:QLHS.user.scores">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.sex1">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:QLHS.user.sex1Reference">
 	<summary>
  No Metadata Documentation available.
  </summary>
@@ -558,6 +580,94 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:QLHS.MyDetail.lblFaculty">
 	<summary>
 lblFaculty control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.Label3">
+	<summary>
+Label3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.lblFullname">
+	<summary>
+lblFullname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.Label4">
+	<summary>
+Label4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.lblBirthday">
+	<summary>
+lblBirthday control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.Label5">
+	<summary>
+Label5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.lblSex">
+	<summary>
+lblSex control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.Label6">
+	<summary>
+Label6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.lblAddress">
+	<summary>
+lblAddress control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.Label7">
+	<summary>
+Label7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.lblCountry">
+	<summary>
+lblCountry control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:QLHS.MyDetail.HyperLink3">
+	<summary>
+HyperLink3 control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -838,14 +948,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:QLHS.Site.HyperLink5">
 	<summary>
 HyperLink5 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:QLHS.Site.form1">
-	<summary>
-form1 control.
 </summary>
 	<remarks>
 Auto-generated field.

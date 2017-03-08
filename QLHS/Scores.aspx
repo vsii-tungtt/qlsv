@@ -17,6 +17,7 @@
                     <div class="box-body no-padding">
                         <div class="dataTables_wrapper dt-bootstrap">
                             <div class="row no-margin">
+                                <form runat="server">
                                 <div class="col-sm-12 no-padding">
                                     <asp:GridView CssClass="table table-striped table-bordered table-hover dataTable" ID="GridView1" runat="server" AutoGenerateColumns="False" 
                                     DataKeyNames="id" EmptyDataText="No records has been added." >
@@ -37,6 +38,7 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>

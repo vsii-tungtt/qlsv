@@ -137,12 +137,20 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Content Include="EditClass.aspx" />
+    <Content Include="EditMyDetail.aspx" />
     <Content Include="Global.asax" />
     <Compile Include="EditClass.aspx.designer.vb">
       <DependentUpon>EditClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditClass.aspx.vb">
       <DependentUpon>EditClass.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EditMyDetail.aspx.designer.vb">
+      <DependentUpon>EditMyDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMyDetail.aspx.vb">
+      <DependentUpon>EditMyDetail.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
@@ -153,6 +161,10 @@
     <Content Include="Logout.aspx" />
     <Content Include="MyDetail.aspx" />
     <Content Include="Scores.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\classes-list.js" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Site.master" />
     <Compile Include="Login.aspx.designer.vb">
       <DependentUpon>Login.aspx</DependentUpon>

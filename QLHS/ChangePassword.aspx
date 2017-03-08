@@ -14,6 +14,7 @@
     <div class="col-md-7 box-center">
         <div class="box">
             <div class="box-body">
+                <form runat="server">
                 <div class="wrapper panel-body">
                     <fieldset>
                         <legend>Change Password</legend>
@@ -32,6 +33,7 @@
                     <div class="col-sm-4"></div>
                     <asp:HyperLink ID="HyperLink3" CssClass="btn aka-btn col-sm-4 btn-default" runat="server" NavigateUrl="~/Default.aspx">Cancel</asp:HyperLink>
                 </div>
+                </form>
             </div>
         </div>
     </div>

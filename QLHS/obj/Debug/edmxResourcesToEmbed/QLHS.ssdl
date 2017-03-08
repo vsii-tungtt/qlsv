@@ -5,7 +5,7 @@
     <EntitySet Name="faculties" EntityType="QLSVModel.Store.faculties" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="roles" EntityType="QLSVModel.Store.roles" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="scores" EntityType="QLSVModel.Store.scores" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="sysdiagrams" EntityType="QLSVModel.Store.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sexes" EntityType="QLSVModel.Store.sexes" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="users" EntityType="QLSVModel.Store.users" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_classes_faculties" Association="QLSVModel.Store.FK_classes_faculties">
       <End Role="faculties" EntitySet="faculties" />
@@ -18,6 +18,10 @@
     <AssociationSet Name="FK_scores_users" Association="QLSVModel.Store.FK_scores_users">
       <End Role="users" EntitySet="users" />
       <End Role="scores" EntitySet="scores" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Sex" Association="QLSVModel.Store.fk_Sex">
+      <End Role="sexes" EntitySet="sexes" />
+      <End Role="users" EntitySet="users" />
     </AssociationSet>
     <AssociationSet Name="FK_users_faculties" Association="QLSVModel.Store.FK_users_faculties">
       <End Role="faculties" EntitySet="faculties" />
@@ -36,6 +40,7 @@
     <Property Name="class_name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="faculty_id" Type="int" Nullable="false" />
     <Property Name="delflg" Type="int" Nullable="false" />
+    <Property Name="class_code" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="faculties">
     <Key>
@@ -60,18 +65,15 @@
     <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="student_id" Type="int" Nullable="false" />
     <Property Name="class_id" Type="int" Nullable="false" />
-    <Property Name="score" Type="float" Nullable="false" />
+    <Property Name="score" Type="float" />
     <Property Name="delflg" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
+  <EntityType Name="sexes">
     <Key>
-      <PropertyRef Name="diagram_id" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="name" Nullable="false" MaxLength="128" Type="nvarchar" />
-    <Property Name="principal_id" Nullable="false" Type="int" />
-    <Property Name="diagram_id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sex" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="users">
     <Key>
@@ -83,6 +85,11 @@
     <Property Name="faculty_id" Type="int" Nullable="false" />
     <Property Name="delflg" Type="int" Nullable="false" />
     <Property Name="role_id" Type="int" Nullable="false" />
+    <Property Name="full_name" Type="nvarchar(max)" />
+    <Property Name="birthday" Type="datetime" />
+    <Property Name="sex" Type="int" />
+    <Property Name="residence" Type="nvarchar(max)" />
+    <Property Name="country" Type="nvarchar(max)" />
   </EntityType>
   <Association Name="FK_classes_faculties">
     <End Role="faculties" Type="QLSVModel.Store.faculties" Multiplicity="1" />
@@ -117,6 +124,18 @@
       </Principal>
       <Dependent Role="scores">
         <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Sex">
+    <End Role="sexes" Type="QLSVModel.Store.sexes" Multiplicity="0..1" />
+    <End Role="users" Type="QLSVModel.Store.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sexes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="sex" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

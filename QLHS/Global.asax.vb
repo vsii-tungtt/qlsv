@@ -20,7 +20,7 @@ Public Class Global_asax
         ' <ScaffoldTable(true)> attribute to the partial class.
         ' Note: Make sure that you change "YourDataContextType" to the name of the data context
         ' class in your application.
-        DefaultModel.RegisterContext(GetType(QLSVEntities
+        DefaultModel.RegisterContext(GetType(QLSVEntities2
                                      ), New ContextConfiguration() With {.ScaffoldAllTables = True})
     
         ' The following statement supports separate-page mode, where the List, Detail, Insert, and 

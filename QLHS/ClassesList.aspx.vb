@@ -16,12 +16,23 @@ Public Class ClassesList
 
 
     Private Sub BindGrid()
+        Dim sql1 As String = ""
+        Dim sql2 As String = ""
         con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
+
+        If Not String.IsNullOrEmpty(Request.QueryString("txtClassCode")) Then
+            sql1 = " AND classes.class_code LIKE '%" + Request.QueryString("txtClassCode").ToString + "%'"
+        End If
+        If Not String.IsNullOrEmpty(Request.QueryString("txtClassName")) Then
+            sql2 = " AND classes.class_name LIKE '%" + Request.QueryString("txtClassName").ToString + "%'"
+        End If
+
+
         If (Session("Role") = ROLE_STUDENT) Then
-            cmd = New SqlCommand("SELECT classes.class_code AS classCode, classes.id AS id, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id INNER JOIN scores ON classes.id = scores.class_id WHERE classes.delflg = 0 AND scores.student_id=" + Session("UserID"))
+            cmd = New SqlCommand("SELECT classes.class_code AS classCode, classes.id AS id, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id INNER JOIN scores ON classes.id = scores.class_id WHERE classes.delflg = 0 AND scores.student_id=" + Session("UserID") + sql1 + sql2)
         ElseIf (Session("Role") = ROLE_TEACHER) Then
-            cmd = New SqlCommand("SELECT classes.class_code AS classCode, classes.id AS id, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id WHERE classes.delflg = 0 AND classes.faculty_id=" + Session("FacultyOfUser"))
+            cmd = New SqlCommand("SELECT classes.class_code AS classCode, classes.id AS id, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id WHERE classes.delflg = 0 AND classes.faculty_id=" + Session("FacultyOfUser") + sql1 + sql2)
         End If
         sda = New SqlDataAdapter()
         cmd.Connection = con

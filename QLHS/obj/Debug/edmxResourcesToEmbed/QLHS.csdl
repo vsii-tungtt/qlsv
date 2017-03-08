@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QLSVModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-  <EntityContainer Name="QLSVEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="QLSVEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="classes" EntityType="QLSVModel.class" />
     <EntitySet Name="faculties" EntityType="QLSVModel.faculty" />
     <EntitySet Name="roles" EntityType="QLSVModel.role" />
     <EntitySet Name="scores" EntityType="QLSVModel.score" />
-    <EntitySet Name="sysdiagrams" EntityType="QLSVModel.sysdiagram" />
+    <EntitySet Name="sexes" EntityType="QLSVModel.sex" />
     <EntitySet Name="users" EntityType="QLSVModel.user" />
     <AssociationSet Name="FK_classes_faculties" Association="QLSVModel.FK_classes_faculties">
       <End Role="faculties" EntitySet="faculties" />
@@ -27,6 +27,10 @@
       <End Role="users" EntitySet="users" />
       <End Role="scores" EntitySet="scores" />
     </AssociationSet>
+    <AssociationSet Name="fk_Sex" Association="QLSVModel.fk_Sex">
+      <End Role="sexes" EntitySet="sexes" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="class">
     <Key>
@@ -36,6 +40,7 @@
     <Property Name="class_name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="faculty_id" Type="Int32" Nullable="false" />
     <Property Name="delflg" Type="Int32" Nullable="false" />
+    <Property Name="class_code" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="faculty" Relationship="QLSVModel.FK_classes_faculties" FromRole="classes" ToRole="faculties" />
     <NavigationProperty Name="scores" Relationship="QLSVModel.FK_scores_classes" FromRole="classes" ToRole="scores" />
   </EntityType>
@@ -65,20 +70,18 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="student_id" Type="Int32" Nullable="false" />
     <Property Name="class_id" Type="Int32" Nullable="false" />
-    <Property Name="score1" Type="Double" Nullable="false" />
+    <Property Name="score1" Type="Double" />
     <Property Name="delflg" Type="Int32" Nullable="false" />
     <NavigationProperty Name="class" Relationship="QLSVModel.FK_scores_classes" FromRole="scores" ToRole="classes" />
     <NavigationProperty Name="user" Relationship="QLSVModel.FK_scores_users" FromRole="scores" ToRole="users" />
   </EntityType>
-  <EntityType Name="sysdiagram">
+  <EntityType Name="sex">
     <Key>
-      <PropertyRef Name="diagram_id" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" Type="String" />
-    <Property Name="principal_id" Nullable="false" Type="Int32" />
-    <Property Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" MaxLength="Max" FixedLength="false" Type="Binary" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sex1" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="users" Relationship="QLSVModel.fk_Sex" FromRole="sexes" ToRole="users" />
   </EntityType>
   <EntityType Name="user">
     <Key>
@@ -90,9 +93,15 @@
     <Property Name="faculty_id" Type="Int32" Nullable="false" />
     <Property Name="delflg" Type="Int32" Nullable="false" />
     <Property Name="role_id" Type="Int32" Nullable="false" />
+    <Property Name="full_name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="birthday" Type="DateTime" />
+    <Property Name="sex" Type="Int32" />
+    <Property Name="residence" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="country" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="faculty" Relationship="QLSVModel.FK_users_faculties" FromRole="users" ToRole="faculties" />
     <NavigationProperty Name="role" Relationship="QLSVModel.FK_users_roles" FromRole="users" ToRole="roles" />
     <NavigationProperty Name="scores" Relationship="QLSVModel.FK_scores_users" FromRole="users" ToRole="scores" />
+    <NavigationProperty Name="sex1" Relationship="QLSVModel.fk_Sex" FromRole="users" ToRole="sexes" />
   </EntityType>
   <Association Name="FK_classes_faculties">
     <End Role="faculties" Type="QLSVModel.faculty" Multiplicity="1" />
@@ -151,6 +160,18 @@
       </Principal>
       <Dependent Role="scores">
         <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Sex">
+    <End Role="sexes" Type="QLSVModel.sex" Multiplicity="0..1" />
+    <End Role="users" Type="QLSVModel.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sexes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="sex" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

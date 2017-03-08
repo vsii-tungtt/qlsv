@@ -18,13 +18,14 @@ Imports System.Runtime.Serialization
 Imports System.Xml.Serialization
 
 
-<Assembly: EdmSchemaAttribute("5d490c65-cb3d-4362-bc05-a320e84d57aa")>
+<Assembly: EdmSchemaAttribute("e78b34ab-be3f-41cd-b37b-f0e4d326ceb5")>
 #Region "EDM Relationship Metadata"
 <Assembly: EdmRelationshipAttribute("QLSVModel", "FK_classes_faculties", "faculties", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(faculty), "classes", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType([class]), True)>
 <Assembly: EdmRelationshipAttribute("QLSVModel", "FK_scores_classes", "classes", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType([class]), "scores", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(score), True)>
 <Assembly: EdmRelationshipAttribute("QLSVModel", "FK_users_faculties", "faculties", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(faculty), "users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(user), True)>
 <Assembly: EdmRelationshipAttribute("QLSVModel", "FK_users_roles", "roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(role), "users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(user), True)>
 <Assembly: EdmRelationshipAttribute("QLSVModel", "FK_scores_users", "users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(user), "scores", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(score), True)>
+<Assembly: EdmRelationshipAttribute("QLSVModel", "fk_Sex", "sexes", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(sex), "users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(user), True)>
 
 #End Region
 
@@ -33,34 +34,34 @@ Imports System.Xml.Serialization
 ''' <summary>
 ''' No Metadata Documentation available.
 ''' </summary>
-Public Partial Class QLSVEntities
+Public Partial Class QLSVEntities2
     Inherits ObjectContext
 
     #Region "Constructors"
 
     ''' <summary>
-    ''' Initializes a new QLSVEntities object using the connection string found in the 'QLSVEntities' section of the application configuration file.
+    ''' Initializes a new QLSVEntities2 object using the connection string found in the 'QLSVEntities2' section of the application configuration file.
     ''' </summary>
     Public Sub New()
-        MyBase.New("name=QLSVEntities", "QLSVEntities")
+        MyBase.New("name=QLSVEntities2", "QLSVEntities2")
         MyBase.ContextOptions.LazyLoadingEnabled = true
         OnContextCreated()
     End Sub
 
     ''' <summary>
-    ''' Initialize a new QLSVEntities object.
+    ''' Initialize a new QLSVEntities2 object.
     ''' </summary>
     Public Sub New(ByVal connectionString As String)
-        MyBase.New(connectionString, "QLSVEntities")
+        MyBase.New(connectionString, "QLSVEntities2")
         MyBase.ContextOptions.LazyLoadingEnabled = true
         OnContextCreated()
     End Sub
 
     ''' <summary>
-    ''' Initialize a new QLSVEntities object.
+    ''' Initialize a new QLSVEntities2 object.
     ''' </summary>
     Public Sub New(ByVal connection As EntityConnection)
-        MyBase.New(connection, "QLSVEntities")
+        MyBase.New(connection, "QLSVEntities2")
         MyBase.ContextOptions.LazyLoadingEnabled = true
         OnContextCreated()
     End Sub
@@ -135,16 +136,16 @@ Public Partial Class QLSVEntities
     ''' <summary>
     ''' No Metadata Documentation available.
     ''' </summary>
-    Public ReadOnly Property sysdiagrams() As ObjectSet(Of sysdiagram)
+    Public ReadOnly Property sexes() As ObjectSet(Of sex)
         Get
-            If (_sysdiagrams Is Nothing) Then
-                _sysdiagrams = MyBase.CreateObjectSet(Of sysdiagram)("sysdiagrams")
+            If (_sexes Is Nothing) Then
+                _sexes = MyBase.CreateObjectSet(Of sex)("sexes")
             End If
-            Return _sysdiagrams
+            Return _sexes
         End Get
     End Property
 
-    Private _sysdiagrams As ObjectSet(Of sysdiagram)
+    Private _sexes As ObjectSet(Of sex)
 
     ''' <summary>
     ''' No Metadata Documentation available.
@@ -193,10 +194,10 @@ Public Partial Class QLSVEntities
     End Sub
 
     ''' <summary>
-    ''' Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+    ''' Deprecated Method for adding a new object to the sexes EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
     ''' </summary>
-    Public Sub AddTosysdiagrams(ByVal sysdiagram As sysdiagram)
-        MyBase.AddObject("sysdiagrams", sysdiagram)
+    Public Sub AddTosexes(ByVal sex As sex)
+        MyBase.AddObject("sexes", sex)
     End Sub
 
     ''' <summary>
@@ -344,6 +345,31 @@ Public Partial Class [class]
     End Sub
 
     Private Partial Sub OndelflgChanged()
+    End Sub
+
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+    <DataMemberAttribute()>
+    Public Property class_code() As Global.System.String
+        Get
+            Return _class_code
+        End Get
+        Set
+            Onclass_codeChanging(value)
+            ReportPropertyChanging("class_code")
+            _class_code = StructuralObject.SetValidValue(value, true)
+            ReportPropertyChanged("class_code")
+            Onclass_codeChanged()
+        End Set
+    End Property
+
+    Private _class_code As Global.System.String
+    Private Partial Sub Onclass_codeChanging(value As Global.System.String)
+    End Sub
+
+    Private Partial Sub Onclass_codeChanged()
     End Sub
 
     #End Region
@@ -699,14 +725,12 @@ Public Partial Class score
     ''' <param name="id">Initial value of the id property.</param>
     ''' <param name="student_id">Initial value of the student_id property.</param>
     ''' <param name="class_id">Initial value of the class_id property.</param>
-    ''' <param name="score1">Initial value of the score1 property.</param>
     ''' <param name="delflg">Initial value of the delflg property.</param>
-    Public Shared Function Createscore(id As Global.System.Int32, student_id As Global.System.Int32, class_id As Global.System.Int32, score1 As Global.System.Double, delflg As Global.System.Int32) As score
+    Public Shared Function Createscore(id As Global.System.Int32, student_id As Global.System.Int32, class_id As Global.System.Int32, delflg As Global.System.Int32) As score
         Dim score as score = New score
         score.id = id
         score.student_id = student_id
         score.class_id = class_id
-        score.score1 = score1
         score.delflg = delflg
         Return score
     End Function
@@ -795,9 +819,9 @@ Public Partial Class score
     ''' <summary>
     ''' No Metadata Documentation available.
     ''' </summary>
-    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=false)>
+    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
     <DataMemberAttribute()>
-    Public Property score1() As Global.System.Double
+    Public Property score1() As Nullable(Of Global.System.Double)
         Get
             Return _score1
         End Get
@@ -810,8 +834,8 @@ Public Partial Class score
         End Set
     End Property
 
-    Private _score1 As Global.System.Double
-    Private Partial Sub Onscore1Changing(value As Global.System.Double)
+    Private _score1 As Nullable(Of Global.System.Double)
+    Private Partial Sub Onscore1Changing(value As Nullable(Of Global.System.Double))
     End Sub
 
     Private Partial Sub Onscore1Changed()
@@ -915,25 +939,23 @@ End Class
 ''' <summary>
 ''' No Metadata Documentation available.
 ''' </summary>
-<EdmEntityTypeAttribute(NamespaceName:="QLSVModel", Name:="sysdiagram")>
+<EdmEntityTypeAttribute(NamespaceName:="QLSVModel", Name:="sex")>
 <Serializable()>
 <DataContractAttribute(IsReference:=True)>
-Public Partial Class sysdiagram
+Public Partial Class sex
     Inherits EntityObject
     #Region "Factory Method"
 
     ''' <summary>
-    ''' Create a new sysdiagram object.
+    ''' Create a new sex object.
     ''' </summary>
-    ''' <param name="name">Initial value of the name property.</param>
-    ''' <param name="principal_id">Initial value of the principal_id property.</param>
-    ''' <param name="diagram_id">Initial value of the diagram_id property.</param>
-    Public Shared Function Createsysdiagram(name As Global.System.String, principal_id As Global.System.Int32, diagram_id As Global.System.Int32) As sysdiagram
-        Dim sysdiagram as sysdiagram = New sysdiagram
-        sysdiagram.name = name
-        sysdiagram.principal_id = principal_id
-        sysdiagram.diagram_id = diagram_id
-        Return sysdiagram
+    ''' <param name="id">Initial value of the id property.</param>
+    ''' <param name="sex1">Initial value of the sex1 property.</param>
+    Public Shared Function Createsex(id As Global.System.Int32, sex1 As Global.System.String) As sex
+        Dim sex as sex = New sex
+        sex.id = id
+        sex.sex1 = sex1
+        Return sex
     End Function
 
     #End Region
@@ -943,129 +965,76 @@ Public Partial Class sysdiagram
     ''' <summary>
     ''' No Metadata Documentation available.
     ''' </summary>
-    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=false)>
-    <DataMemberAttribute()>
-    Public Property name() As Global.System.String
-        Get
-            Return _name
-        End Get
-        Set
-            OnnameChanging(value)
-            ReportPropertyChanging("name")
-            _name = StructuralObject.SetValidValue(value, false)
-            ReportPropertyChanged("name")
-            OnnameChanged()
-        End Set
-    End Property
-
-    Private _name As Global.System.String
-    Private Partial Sub OnnameChanging(value As Global.System.String)
-    End Sub
-
-    Private Partial Sub OnnameChanged()
-    End Sub
-
-    ''' <summary>
-    ''' No Metadata Documentation available.
-    ''' </summary>
-    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=false)>
-    <DataMemberAttribute()>
-    Public Property principal_id() As Global.System.Int32
-        Get
-            Return _principal_id
-        End Get
-        Set
-            Onprincipal_idChanging(value)
-            ReportPropertyChanging("principal_id")
-            _principal_id = StructuralObject.SetValidValue(value)
-            ReportPropertyChanged("principal_id")
-            Onprincipal_idChanged()
-        End Set
-    End Property
-
-    Private _principal_id As Global.System.Int32
-    Private Partial Sub Onprincipal_idChanging(value As Global.System.Int32)
-    End Sub
-
-    Private Partial Sub Onprincipal_idChanged()
-    End Sub
-
-    ''' <summary>
-    ''' No Metadata Documentation available.
-    ''' </summary>
     <EdmScalarPropertyAttribute(EntityKeyProperty:=true, IsNullable:=false)>
     <DataMemberAttribute()>
-    Public Property diagram_id() As Global.System.Int32
+    Public Property id() As Global.System.Int32
         Get
-            Return _diagram_id
+            Return _id
         End Get
         Set
-            If (_diagram_id <> Value) Then
-                Ondiagram_idChanging(value)
-                ReportPropertyChanging("diagram_id")
-                _diagram_id = StructuralObject.SetValidValue(value)
-                ReportPropertyChanged("diagram_id")
-                Ondiagram_idChanged()
+            If (_id <> Value) Then
+                OnidChanging(value)
+                ReportPropertyChanging("id")
+                _id = StructuralObject.SetValidValue(value)
+                ReportPropertyChanged("id")
+                OnidChanged()
             End If
         End Set
     End Property
 
-    Private _diagram_id As Global.System.Int32
-    Private Partial Sub Ondiagram_idChanging(value As Global.System.Int32)
+    Private _id As Global.System.Int32
+    Private Partial Sub OnidChanging(value As Global.System.Int32)
     End Sub
 
-    Private Partial Sub Ondiagram_idChanged()
-    End Sub
-
-    ''' <summary>
-    ''' No Metadata Documentation available.
-    ''' </summary>
-    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
-    <DataMemberAttribute()>
-    Public Property version() As Nullable(Of Global.System.Int32)
-        Get
-            Return _version
-        End Get
-        Set
-            OnversionChanging(value)
-            ReportPropertyChanging("version")
-            _version = StructuralObject.SetValidValue(value)
-            ReportPropertyChanged("version")
-            OnversionChanged()
-        End Set
-    End Property
-
-    Private _version As Nullable(Of Global.System.Int32)
-    Private Partial Sub OnversionChanging(value As Nullable(Of Global.System.Int32))
-    End Sub
-
-    Private Partial Sub OnversionChanged()
+    Private Partial Sub OnidChanged()
     End Sub
 
     ''' <summary>
     ''' No Metadata Documentation available.
     ''' </summary>
-    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=false)>
     <DataMemberAttribute()>
-    Public Property definition() As Global.System.Byte()
+    Public Property sex1() As Global.System.String
         Get
-                Return StructuralObject.GetValidValue(_definition)
+            Return _sex1
         End Get
         Set
-            OndefinitionChanging(value)
-            ReportPropertyChanging("definition")
-            _definition = StructuralObject.SetValidValue(value, true)
-            ReportPropertyChanged("definition")
-            OndefinitionChanged()
+            Onsex1Changing(value)
+            ReportPropertyChanging("sex1")
+            _sex1 = StructuralObject.SetValidValue(value, false)
+            ReportPropertyChanged("sex1")
+            Onsex1Changed()
         End Set
     End Property
 
-    Private _definition As Global.System.Byte()
-    Private Partial Sub OndefinitionChanging(value As Global.System.Byte())
+    Private _sex1 As Global.System.String
+    Private Partial Sub Onsex1Changing(value As Global.System.String)
     End Sub
 
-    Private Partial Sub OndefinitionChanged()
+    Private Partial Sub Onsex1Changed()
     End Sub
+
+    #End Region
+
+    #Region "Navigation Properties"
+
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <XmlIgnoreAttribute()>
+    <SoapIgnoreAttribute()>
+    <DataMemberAttribute()>
+    <EdmRelationshipNavigationPropertyAttribute("QLSVModel", "fk_Sex", "users")>
+     Public Property users() As EntityCollection(Of user)
+        Get
+            Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of user)("QLSVModel.fk_Sex", "users")
+        End Get
+        Set
+            If (Not value Is Nothing)
+                CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of user)("QLSVModel.fk_Sex", "users", value)
+            End If
+        End Set
+    End Property
 
     #End Region
 
@@ -1257,6 +1226,131 @@ Public Partial Class user
     Private Partial Sub Onrole_idChanged()
     End Sub
 
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+    <DataMemberAttribute()>
+    Public Property full_name() As Global.System.String
+        Get
+            Return _full_name
+        End Get
+        Set
+            Onfull_nameChanging(value)
+            ReportPropertyChanging("full_name")
+            _full_name = StructuralObject.SetValidValue(value, true)
+            ReportPropertyChanged("full_name")
+            Onfull_nameChanged()
+        End Set
+    End Property
+
+    Private _full_name As Global.System.String
+    Private Partial Sub Onfull_nameChanging(value As Global.System.String)
+    End Sub
+
+    Private Partial Sub Onfull_nameChanged()
+    End Sub
+
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+    <DataMemberAttribute()>
+    Public Property birthday() As Nullable(Of Global.System.DateTime)
+        Get
+            Return _birthday
+        End Get
+        Set
+            OnbirthdayChanging(value)
+            ReportPropertyChanging("birthday")
+            _birthday = StructuralObject.SetValidValue(value)
+            ReportPropertyChanged("birthday")
+            OnbirthdayChanged()
+        End Set
+    End Property
+
+    Private _birthday As Nullable(Of Global.System.DateTime)
+    Private Partial Sub OnbirthdayChanging(value As Nullable(Of Global.System.DateTime))
+    End Sub
+
+    Private Partial Sub OnbirthdayChanged()
+    End Sub
+
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+    <DataMemberAttribute()>
+    Public Property sex() As Nullable(Of Global.System.Int32)
+        Get
+            Return _sex
+        End Get
+        Set
+            OnsexChanging(value)
+            ReportPropertyChanging("sex")
+            _sex = StructuralObject.SetValidValue(value)
+            ReportPropertyChanged("sex")
+            OnsexChanged()
+        End Set
+    End Property
+
+    Private _sex As Nullable(Of Global.System.Int32)
+    Private Partial Sub OnsexChanging(value As Nullable(Of Global.System.Int32))
+    End Sub
+
+    Private Partial Sub OnsexChanged()
+    End Sub
+
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+    <DataMemberAttribute()>
+    Public Property residence() As Global.System.String
+        Get
+            Return _residence
+        End Get
+        Set
+            OnresidenceChanging(value)
+            ReportPropertyChanging("residence")
+            _residence = StructuralObject.SetValidValue(value, true)
+            ReportPropertyChanged("residence")
+            OnresidenceChanged()
+        End Set
+    End Property
+
+    Private _residence As Global.System.String
+    Private Partial Sub OnresidenceChanging(value As Global.System.String)
+    End Sub
+
+    Private Partial Sub OnresidenceChanged()
+    End Sub
+
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+    <DataMemberAttribute()>
+    Public Property country() As Global.System.String
+        Get
+            Return _country
+        End Get
+        Set
+            OncountryChanging(value)
+            ReportPropertyChanging("country")
+            _country = StructuralObject.SetValidValue(value, true)
+            ReportPropertyChanged("country")
+            OncountryChanged()
+        End Set
+    End Property
+
+    Private _country As Global.System.String
+    Private Partial Sub OncountryChanging(value As Global.System.String)
+    End Sub
+
+    Private Partial Sub OncountryChanged()
+    End Sub
+
     #End Region
 
     #Region "Navigation Properties"
@@ -1337,6 +1431,37 @@ Public Partial Class user
         Set
             If (Not value Is Nothing)
                 CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of score)("QLSVModel.FK_scores_users", "scores", value)
+            End If
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <XmlIgnoreAttribute()>
+    <SoapIgnoreAttribute()>
+    <DataMemberAttribute()>
+    <EdmRelationshipNavigationPropertyAttribute("QLSVModel", "fk_Sex", "sexes")>
+    Public Property sex1() As sex
+        Get
+            Return CType(Me, IEntityWithRelationships).RelationshipManager.GetRelatedReference(Of sex)("QLSVModel.fk_Sex", "sexes").Value
+        End Get
+        Set
+            CType(Me, IEntityWithRelationships).RelationshipManager.GetRelatedReference(Of sex)("QLSVModel.fk_Sex", "sexes").Value = value
+        End Set
+    End Property
+    ''' <summary>
+    ''' No Metadata Documentation available.
+    ''' </summary>
+    <BrowsableAttribute(False)>
+    <DataMemberAttribute()>
+    Public Property sex1Reference() As EntityReference(Of sex)
+        Get
+            Return CType(Me, IEntityWithRelationships).RelationshipManager.GetRelatedReference(Of sex)("QLSVModel.fk_Sex", "sexes")
+        End Get
+        Set
+            If (Not value Is Nothing)
+                CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedReference(Of sex)("QLSVModel.fk_Sex", "sexes", value)
             End If
         End Set
     End Property

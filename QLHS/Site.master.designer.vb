@@ -86,15 +86,6 @@ Partial Public Class Site
     Protected WithEvents HyperLink5 As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''form1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-    '''<summary>
     '''ScriptManager1 control.
     '''</summary>
     '''<remarks>
