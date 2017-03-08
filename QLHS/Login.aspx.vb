@@ -16,7 +16,6 @@ Public Class Login1
         dr = cmd.ExecuteReader
         If (dr.Read) Then
             Dim password As String = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text, "SHA1")
-            Response.Write(password.ToString)
             If (dr(0).ToString = password.ToString) Then
                 Session("UserID") = dr(1).ToString
                 Session("Role") = dr(2).ToString

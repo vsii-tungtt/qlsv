@@ -11,8 +11,9 @@ Public Class ChangePassword
     End Sub
 
     Protected Sub btnChangePassword_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnChangePassword.Click
-        Dim currentPassword As String = txtCurrentPassword.Text
+        Dim currentPassword As String = FormsAuthentication.HashPasswordForStoringInConfigFile(txtCurrentPassword.Text, "SHA1").ToString
         Dim newPassword As String = txtNewPassword.Text
+        Dim hashNewPassword As String = FormsAuthentication.HashPasswordForStoringInConfigFile(newPassword, "SHA1").ToString
         Dim userId As String = Session("UserID")
         con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
@@ -25,7 +26,7 @@ Public Class ChangePassword
                 Else
                     cmd.Dispose()
                     dr.Close()
-                    cmdUpdate = New SqlCommand("UPDATE users SET password='" + newPassword + "' WHERE id = " + userId, con)
+                    cmdUpdate = New SqlCommand("UPDATE users SET password='" + hashNewPassword + "' WHERE id = " + userId, con)
                     cmdUpdate.ExecuteNonQuery()
                     con.Close()
                     Response.Redirect("Default.aspx")

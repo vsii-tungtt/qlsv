@@ -194,6 +194,7 @@
       <DependentUpon>Scores.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Settings.vb" />
     <Compile Include="Site.master.designer.vb">
       <DependentUpon>Site.master</DependentUpon>
     </Compile>
