@@ -42,18 +42,36 @@ Public Class EditClass
         Dim classId As String = Request.QueryString("classId").ToString
         con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
-        cmd1 = New SqlCommand("SELECT * FROM classes WHERE delflg=0 AND class_code='" + newClassCode + "'", con)
+        cmd1 = New SqlCommand("SELECT id FROM classes WHERE delflg=0 AND class_code='" + newClassCode + "'", con)
         dr = cmd1.ExecuteReader
         If (dr.Read) Then
-            MsgBox("Class ID has used.")
+            If (dr(0).ToString = classId) Then
+                cmd1.Dispose()
+                dr.Close()
+                If (newClassName.Length = 0) Then
+                    MsgBox("Please fill Class Name.")
+                Else
+                    cmd = New SqlCommand("UPDATE classes SET class_name='" + newClassName + "' WHERE id =" + classId)
+                    cmd.Connection = con
+                    cmd.ExecuteNonQuery()
+                    con.Close()
+                    Response.Redirect("~/ClassesList.aspx")
+                End If
+            Else
+                MsgBox("Class ID has used.")
+            End If
         Else
             cmd1.Dispose()
             dr.Close()
-            cmd = New SqlCommand("UPDATE classes SET class_name='" + newClassName + "', class_code='" + newClassCode + "' WHERE id =" + classId)
-            cmd.Connection = con
-            cmd.ExecuteNonQuery()
-            con.Close()
-            Response.Redirect("~/ClassesList.aspx")
+            If (newClassCode.Length = 0 Or newClassName.Length = 0) Then
+                MsgBox("Please fill Class ID and Class Name.")
+            Else
+                cmd = New SqlCommand("UPDATE classes SET class_name='" + newClassName + "', class_code='" + newClassCode + "' WHERE id =" + classId)
+                cmd.Connection = con
+                cmd.ExecuteNonQuery()
+                con.Close()
+                Response.Redirect("~/ClassesList.aspx")
+            End If
         End If
     End Sub
 End Class

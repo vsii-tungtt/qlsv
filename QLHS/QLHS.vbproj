@@ -164,6 +164,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\classes-list.js" />
+    <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Site.master" />
     <Compile Include="Login.aspx.designer.vb">
@@ -216,9 +217,12 @@
     </Compile>
     <Content Include="Style\adminlte.css" />
     <Content Include="Style\bootstrap.min.css" />
+    <Content Include="Style\jquery-ui.css" />
     <Content Include="Style\main.css" />
     <Content Include="Style\Site.css" />
-    <Content Include="web.config" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </Content>

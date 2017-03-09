@@ -35,7 +35,8 @@ Public Class ChangePassword
                 MsgBox("Password Is Wrong. Re-enter Correct Password")
             End If
         Else
-            Response.Redirect("Logout.aspx")
+            FormsAuthentication.SignOut()
+            Response.Redirect("Login.aspx")
         End If
     End Sub
 End Class
