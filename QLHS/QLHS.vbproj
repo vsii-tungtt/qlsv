@@ -138,6 +138,7 @@
     </Compile>
     <Content Include="EditClass.aspx" />
     <Content Include="EditMyDetail.aspx" />
+    <Content Include="EditScore.aspx" />
     <Content Include="Global.asax" />
     <Compile Include="EditClass.aspx.designer.vb">
       <DependentUpon>EditClass.aspx</DependentUpon>
@@ -151,6 +152,13 @@
     </Compile>
     <Compile Include="EditMyDetail.aspx.vb">
       <DependentUpon>EditMyDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EditScore.aspx.designer.vb">
+      <DependentUpon>EditScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditScore.aspx.vb">
+      <DependentUpon>EditScore.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">

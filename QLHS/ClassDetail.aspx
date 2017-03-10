@@ -58,6 +58,7 @@
                                             <asp:BoundField DataField="username" HeaderText="Student" />
                                             <asp:BoundField DataField="score" HeaderText="Score" />
                                             <asp:CommandField ButtonType="Link" ShowDeleteButton="true" />
+                                            <asp:HyperLinkField Text="Edit" DataNavigateUrlFields="id" DataNavigateUrlFormatString="~/EditScore.aspx?scoreID={0}" />
                                         </Columns>
                                     </asp:GridView>
                                 </div>
