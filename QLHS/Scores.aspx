@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.master" CodeBehind="Scores.aspx.vb" Inherits="QLHS.Scores" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript" src="Scripts/scores.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ul class="breadcrumb">
@@ -10,6 +11,48 @@
           <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Scores.aspx">My Scores</asp:HyperLink>
        </li>
     </ul>
+
+    <div class="box">
+        <div class="box-body">
+            <div class="row">
+                <div class="box-body no-padding">
+                    <div class="row no-margin">
+                        <div class="col-sm-12 no-padding">
+                            <form action="Scores.aspx" method="get" class="form-horizontal">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="col-sm-4 control-label">Class ID</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" id="classCode" name="classCode" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4 control-label">Class Name</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" id="className" name="className" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 control-label">Score</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control numeric" id="scoreMin" name="scoreMin" />
+                                    </div>
+                                    <label class="col-sm-1 control-label">~</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control numeric" id="scoreMax" name="scoreMax" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                    <button type="submit" class="btn aka-btn aka-btn-darkblue big">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="box">
             <div class="box-body">

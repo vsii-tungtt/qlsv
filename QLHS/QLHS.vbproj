@@ -167,6 +167,7 @@
     </Compile>
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Scripts\main.js" />
     <Content Include="MyDetail.aspx" />
     <Content Include="Scores.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -175,6 +176,7 @@
     <Content Include="Scripts\classes-list.js" />
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\scores.js" />
     <Content Include="Site.master" />
     <Compile Include="Login.aspx.designer.vb">
       <DependentUpon>Login.aspx</DependentUpon>

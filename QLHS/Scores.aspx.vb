@@ -19,9 +19,28 @@ Public Class Scores
     End Sub
 
     Private Sub BindGrid()
+        Dim sql1 As String = ""
+        Dim sql2 As String = ""
+        Dim sql3 As String = ""
+        Dim sql4 As String = ""
         con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
-        cmd = New SqlCommand("SELECT scores.id AS id, scores.score AS score, classes.class_code AS classCode, classes.class_name AS className FROM scores INNER JOIN classes ON scores.class_id = classes.id WHERE scores.delflg=0 AND classes.delflg=0 AND scores.student_id=" + Session("UserID"))
+        If Not String.IsNullOrEmpty(Request.QueryString("classCode")) Then
+            sql1 = " AND classes.class_code LIKE '%" + Request.QueryString("classCode").ToString + "%'"
+        End If
+
+        If Not String.IsNullOrEmpty(Request.QueryString("className")) Then
+            sql2 = " AND classes.class_name LIKE '%" + Request.QueryString("className").ToString + "%'"
+        End If
+
+        If Not String.IsNullOrEmpty(Request.QueryString("scoreMin")) Then
+            sql3 = " AND scores.score >= '" + Request.QueryString("scoreMin").ToString + "'"
+        End If
+
+        If Not String.IsNullOrEmpty(Request.QueryString("scoreMax")) Then
+            sql4 = " AND scores.score <= '" + Request.QueryString("scoreMax").ToString + "'"
+        End If
+        cmd = New SqlCommand("SELECT scores.id AS id, scores.score AS score, classes.class_code AS classCode, classes.class_name AS className FROM scores INNER JOIN classes ON scores.class_id = classes.id WHERE scores.delflg=0 AND classes.delflg=0 AND scores.student_id=" + Session("UserID") + sql1 + sql2 + sql3 + sql4)
         sda = New SqlDataAdapter()
         cmd.Connection = con
         sda.SelectCommand = cmd
@@ -30,7 +49,7 @@ Public Class Scores
         GridView1.DataSource = dt
         GridView1.DataBind()
         Dim countCost As Integer = dt.Rows.Count
-        Dim score As Integer = 0
+        Dim score As Decimal = 0
         For Each row As DataRow In dt.Rows
             score += row("score")
         Next
