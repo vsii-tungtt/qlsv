@@ -41,6 +41,15 @@ Partial Public Class ClassDetail
     Protected WithEvents HyperLink3 As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
+    '''txtclassId control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtclassId As Global.System.Web.UI.HtmlControls.HtmlInputText
+
+    '''<summary>
     '''Label1 control.
     '''</summary>
     '''<remarks>

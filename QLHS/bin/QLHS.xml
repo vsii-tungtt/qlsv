@@ -641,6 +641,14 @@ HyperLink3 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:QLHS.ClassDetail.txtclassId">
+	<summary>
+txtclassId control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:QLHS.ClassDetail.Label1">
 	<summary>
 Label1 control.

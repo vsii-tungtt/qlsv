@@ -17,10 +17,22 @@ Public Class ClassDetail
     End Sub
 
     Private Sub BindGrid()
-        Dim classId As String = Request.QueryString("classId").ToString
+        Dim classId As String = Request.QueryString("ctl00$ContentPlaceHolder1$txtclassId").ToString
+        Dim sql1 As String = ""
+        Dim sql2 As String = ""
+        Dim sql3 As String = ""
         con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
-        cmd = New SqlCommand("SELECT scores.id AS id, users.username AS username, scores.score AS score FROM scores INNER JOIN users ON scores.student_id = users.id WHERE scores.delflg=0 AND users.delflg=0 AND scores.class_id=" + classId)
+        If Not String.IsNullOrEmpty(Request.QueryString("student")) Then
+            sql1 = " AND users.username LIKE '%" + Request.QueryString("student").ToString + "%'"
+        End If
+        If Not String.IsNullOrEmpty(Request.QueryString("scoreMin")) Then
+            sql2 = " AND scores.score >= '" + Request.QueryString("scoreMin").ToString + "'"
+        End If
+        If Not String.IsNullOrEmpty(Request.QueryString("scoreMax")) Then
+            sql3 = " AND scores.score <= '" + Request.QueryString("scoreMax").ToString + "'"
+        End If
+        cmd = New SqlCommand("SELECT scores.id AS id, users.username AS username, scores.score AS score FROM scores INNER JOIN users ON scores.student_id = users.id WHERE scores.delflg=0 AND users.delflg=0 AND scores.class_id=" + classId + sql1 + sql2 + sql3)
         sda = New SqlDataAdapter()
         cmd.Connection = con
         sda.SelectCommand = cmd
@@ -34,7 +46,7 @@ Public Class ClassDetail
     End Sub
 
     Private Sub BindLabel()
-        Dim classId As String = Request.QueryString("classId").ToString
+        Dim classId As String = Request.QueryString("ctl00$ContentPlaceHolder1$txtclassId").ToString
         con = New SqlConnection(ConfigurationManager.ConnectionStrings("QLSV").ConnectionString)
         con.Open()
         cmd = New SqlCommand("Select classes.class_code AS classCode, classes.class_name AS className, faculties.faculty_name AS facultyName FROM classes INNER JOIN faculties ON classes.faculty_id = faculties.id WHERE classes.id=" + classId)
@@ -48,6 +60,7 @@ Public Class ClassDetail
             lblclassCode.Text = ds.Tables(0).Rows(0)("classCode").ToString()
             lblclassName.Text = ds.Tables(0).Rows(0)("className").ToString()
             lblFaculty.Text = ds.Tables(0).Rows(0)("facultyName").ToString()
+            txtclassId.Value = classId
         End If
     End Sub
 

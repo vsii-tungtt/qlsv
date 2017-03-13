@@ -33,7 +33,7 @@ Public Class EditScore
             If Not String.IsNullOrEmpty(ds.Tables(0).Rows(0)("score").ToString()) Then
                 txtScore.SelectedValue = ds.Tables(0).Rows(0)("score").ToString()
             End If
-            btnCancel.NavigateUrl = "~/ClassDetail.aspx?classId=" + ds.Tables(0).Rows(0)("classId").ToString()
+            btnCancel.NavigateUrl = "~/ClassDetail.aspx?ctl00%24ContentPlaceHolder1%24txtclassId=" + ds.Tables(0).Rows(0)("classId").ToString()
         End If
     End Sub
 
@@ -52,7 +52,7 @@ Public Class EditScore
         sda.Fill(ds)
         con.Close()
         If ds.Tables(0).Rows.Count > 0 Then
-            Response.Redirect("~/ClassDetail.aspx?classId=" + ds.Tables(0).Rows(0)("classId").ToString())
+            Response.Redirect("~/ClassDetail.aspx?ctl00%24ContentPlaceHolder1%24txtclassId=" + ds.Tables(0).Rows(0)("classId").ToString())
         End If
     End Sub
 End Class

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.master" CodeBehind="ClassDetail.aspx.vb" Inherits="QLHS.ClassDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript" src="Scripts/class-detail.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ul class="breadcrumb">
@@ -20,6 +21,40 @@
                 <div class="box-body no-padding">
                     <div class="row no-margin">
                         <div class="col-sm-12 no-padding">
+                            <form action="ClassDetail.aspx" method="get" class="form-horizontal">
+                                <input id="txtclassId" name="txtclassId" class="hidden" type="text" runat="server" />
+                                <div class="col-sm-6">
+                                    <label class="col-sm-4 control-label">Student</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="student" name="student" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 control-label">Score</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control numeric" id="scoreMin" name="scoreMin" />
+                                    </div>
+                                    <label class="col-sm-1 control-label">~</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control numeric" id="scoreMax" name="scoreMax" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                    <button type="submit" class="btn aka-btn aka-btn-darkblue big">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+            <div class="box-body">
+                <div class="row">
+                    <div class="box-body no-padding">
+                        <div class="dataTables_wrapper dt-bootstrap">
                             <div class="form-group">
                                 <asp:Label ID="Label1" runat="server" Text="Class ID:"></asp:Label>
                                 <span></span>
@@ -37,18 +72,6 @@
                                 <span></span>
                                 <asp:Label ID="lblFaculty" runat="server"></asp:Label>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box">
-            <div class="box-body">
-                <div class="row">
-                    <div class="box-body no-padding">
-                        <div class="dataTables_wrapper dt-bootstrap">
                             <div class="row no-margin">
                                 <form runat="server">
                                 <div class="col-sm-12 no-padding">

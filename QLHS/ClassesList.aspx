@@ -51,7 +51,7 @@
                                             <asp:BoundField DataField="className" HeaderText="Classes" />
                                             <asp:BoundField DataField="facultyName" HeaderText="Faculties" />
                                             <asp:CommandField ButtonType="Link" ShowDeleteButton="true" />
-                                            <asp:HyperLinkField Text="Detail" DataNavigateUrlFields="id" DataNavigateUrlFormatString="~/ClassDetail.aspx?classId={0}" />
+                                            <asp:HyperLinkField Text="Detail" DataNavigateUrlFields="id" DataNavigateUrlFormatString="~/ClassDetail.aspx?ctl00%24ContentPlaceHolder1%24txtclassId={0}" />
                                             <asp:HyperLinkField Text="Edit" DataNavigateUrlFields="id" DataNavigateUrlFormatString="~/EditClass.aspx?classId={0}" />
                                         </Columns>
                                     </asp:GridView>
